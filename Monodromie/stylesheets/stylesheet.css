@@ -6,6 +6,13 @@
  *    user zoom.
  */
 
+@font-face {
+  font-family: "rosettaicons";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://abs.twimg.com/a/1425914221/font/rosetta-icons-Regular.woff") format("woff");
+}
+
 html {
   font-family: sans-serif; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -434,6 +441,16 @@ body {
   line-height: 1.5;
   color: #666;
   background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
+}
+
+header li{
+  display: inline;
+  color: #9DDCFF;
+  font-family: "rosettaicons";
+  padding: 1em;
+}
+header li:before{
+  content: "#";
 }
 
 p {
