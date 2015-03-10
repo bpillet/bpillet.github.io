@@ -6,12 +6,9 @@
  *    user zoom.
  */
 
-@font-face {
-  font-family: "rosettaicons";
-  font-style: normal;
-  font-weight: normal;
-  src: url("https://abs.twimg.com/a/1425914221/font/rosetta-icons-Regular.woff") format("woff");
-}
+@import "./Fonts/ComputerModern.css";
+
+@import "./Fonts/ComputerModernSerif.css";
 
 html {
   font-family: sans-serif; /* 1 */
@@ -443,16 +440,6 @@ body {
   background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
 }
 
-header li{
-  display: inline;
-  color: #9DDCFF;
-  font-family: "rosettaicons";
-  padding: 1em;
-}
-header li:before{
-  content: "#";
-}
-
 p {
   margin-top: 0;
 }
@@ -472,8 +459,23 @@ header {
   border-bottom: solid 1px #275da1;
 }
 
+/************************* HEADER LI VERSION PERSO *******************************/
+
+header li{
+  display: inline;
+  color: #9DDCFF;
+  font-family: ComputerModern, Helvetica, Arial, serif;
+  padding: 1em;
+  text-transform: uppercase;
+}
+header li:before{
+  content: "#";
+}
+
+
 header h1 {
   width: 540px;
+  font-family: 'Computer Modern Serif', ComputerModern, Helvetica, Arial, serif;
   margin-top: 0;
   margin-bottom: 0.2em;
   font-size: 72px;
