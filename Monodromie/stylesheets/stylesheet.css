@@ -432,7 +432,7 @@ th {
 
 /* LAYOUT STYLES */
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: ComputerModern, 'Helvetica Neue', Helvetica, Arial, serif;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
@@ -464,12 +464,12 @@ header {
 header li{
   display: inline;
   color: #9DDCFF;
-  font-family: ComputerModern, Helvetica, Arial, serif;
+  font-family: 'Architects Daughter',ComputerModern, Helvetica, Arial, serif;
   padding: 1em;
-  text-transform: uppercase;
+  font-variant: small-caps;
 }
 header li:before{
-  content: "#";
+  content: '#';
 }
 
 
@@ -482,7 +482,8 @@ header h1 {
   font-weight: normal;
   line-height: 1;
   color: #fff;
-  letter-spacing: -1px;
+  font-variant: small-caps;
+  padding-left: 2rem;
 }
 
 header h2 {
