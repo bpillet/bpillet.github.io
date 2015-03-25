@@ -123,6 +123,10 @@ strong {
   font-weight: bold;
 }
 
+strong {
+  color: black;
+}
+
 /**
  * Address styling not present in Safari and Chrome.
  */
