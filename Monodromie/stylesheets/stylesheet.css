@@ -10,6 +10,10 @@
 
 @import "./Fonts/ComputerModernSerif.css";
 
+/*@import "./icons/css/font-awesome.css";*/
+
+@import "./anim.css";
+
 html {
   font-family: sans-serif; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */

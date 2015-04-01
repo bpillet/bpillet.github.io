@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('./icons/fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('./icons/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('./icons/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('./icons/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('./icons/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('./icons/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359.9deg);
+    transform: rotate(359.9deg);
+  }
+}
+header h1 o1:before{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 0.7em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f1ce";
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+header h1 o2:before{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 0.7em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f1ce";
+  -webkit-animation: spin 2.17s infinite linear;
+  animation: spin 2.17s infinite linear;
+}
+header h1 o3:before{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 0.7em;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "\f1ce";
+  -webkit-animation: spin 2.33s infinite linear;
+  animation: spin 2.33s infinite linear;
+}
