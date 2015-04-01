@@ -25,7 +25,7 @@
     transform: rotate(359.9deg);
   }
 }
-header h1 o1:before{
+header h1 *:before{
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 0.7em;
@@ -37,27 +37,7 @@ header h1 o1:before{
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
 }
-header h1 o2:before{
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 0.7em;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  content: "\f1ce";
-  -webkit-animation: spin 2.17s infinite linear;
-  animation: spin 2.17s infinite linear;
-}
-header h1 o3:before{
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: 0.7em;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
-  content: "\f1ce";
-  -webkit-animation: spin 2.33s infinite linear;
-  animation: spin 2.33s infinite linear;
+header h1 *:hover:before{
+  -webkit-animation: none;
+  animation: none;
 }
