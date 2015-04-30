@@ -1,0 +1,266 @@
+<html>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+<meta name="generator=" content=" vym - view your mind - http://www.insilmaril.de/vym">
+<meta name="author" content=""> 
+<meta name="description" content=""> 
+<link rel='stylesheet' id='css.stylesheet' href='vym.css' />
+
+<head><title>GLn</title></head>
+<body>
+<center><img src="GLn.png" usemap='#imagemap'></center>
+<table class="vym-toc">
+<tr><td class="vym-toc-title">
+Contents:
+</td></tr>
+<tr><td>
+<div class="vym-toc-branch-0"><a href="#mc:0">  106</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:0"> 1.  Géométrie</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:0,bo:0"> 1.1.  Actions</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:0,bo:0"> 1.1.1.  Bruhat</a></br>
+</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:0,bo:0,bo:0"> 1.1.1.1.  Action sur les drapeaux</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:0,bo:1"> 1.1.2.  Décomposition LU, LDU</a></br>
+</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:0,bo:1,bo:0"> 1.1.2.1.  Calcul det</a></br>
+</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:0,bo:0,bo:1,bo:1"> 1.1.2.2.  Calcul inverse</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:0,bo:0,bo:2"> 1.1.3.  Changement de base</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:1"> 2.  Différents corps</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:0"> 2.1.  Corps finis</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:0,bo:0"> 2.1.1.  Cardinal de Gl_n(F_q)</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:1,bo:0,bo:1"> 2.1.2.  p-sylows de Gl_n(F_p)</a></br>
+</div><div class="vym-toc-branch-4"><a href="#mc:0,bo:1,bo:0,bo:1,bo:0"> 2.1.2.1.  Thm de Sylow</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:1,bo:1"> 2.2.  Topologie</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:2"> 3.  Théorie des groupes</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:0"> 3.1.  Générateurs</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:1"> 3.2.  Centre</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:2"> 3.3.  Groupe dérivé</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:2,bo:0"> 3.3.1.  Sl_n</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:3"> 3.4.  Théorème de Burnside</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:2,bo:4"> 3.5.  Décomposition</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:2,bo:4,bo:0"> 3.5.1.  PGl_n(C) = C* × SL_n</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:0,bo:3"> 4.  Sous-groupes</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:0"> 4.1.  Sl_n</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:1"> 4.2.  Orthogonaux</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:1,bo:0"> 4.2.1.  O(n)</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:1,bo:1"> 4.2.2.  O(p,q)</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:1,bo:2"> 4.2.3.  Sp(n)</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:0,bo:3,bo:2"> 4.3.  S_n</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:2,bo:0"> 4.3.1.  Frobenius-Zolotaref</a></br>
+</div><div class="vym-toc-branch-3"><a href="#mc:0,bo:3,bo:2,bo:1"> 4.3.2.  Tout groupe fini</a></br>
+</div><div class="vym-toc-branch-0"><a href="#mc:1">  *</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:0"> 1.  Légende</a></br>
+</div><div class="vym-toc-branch-1"><a href="#mc:1,bo:1"> 2.  Références</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:1,bo:1,bo:0"> 2.1.  Perrin</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:1,bo:1,bo:1"> 2.2.  Objectif Agreg</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:1,bo:1,bo:2"> 2.3.  H2G2</a></br>
+</div><div class="vym-toc-branch-2"><a href="#mc:1,bo:1,bo:3"> 2.4.  Spzirglaz</a></br>
+</div></td></tr>
+</table>
+
+
+<h1><span class='vym-branch-0' style='color:#000000' id='mc:0'>106</span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Groupe linéaire d'un espace vectoriel de dimension finie. Sous-groupes de Gl(E). Applications.
+</td></tr></table>
+</h1>
+  
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:0'>Géométrie</span></h2>
+    <ul class="vym-list-ul-2">
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:0,bo:0'>Actions</span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:0,bo:0'>Bruhat<img src="flags/flag-clock.png"></span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:0,bo:0'>Action sur les drapeaux</span>  </li>
+        </ul>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:0,bo:1'>Décomposition LU, LDU</span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:1,bo:0'>Calcul det<img src="flags/flag-present.png"></span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:1,bo:1'>Calcul inverse<img src="flags/flag-present.png"></span>  </li>
+        </ul>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:0,bo:0,bo:2'>Changement de base</span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:2,bo:0'>à gauche ou à droite</span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:2,bo:1'>d'endomorphisme</span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:0,bo:0,bo:2,bo:2'>Agit simplement et transitivement
+sur les bases de E.<img src="flags/flag-rose.png"></span>  </li>
+        </ul>  </li>
+      </ul>  </li>
+    </ul>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:1'>Différents corps</span></h2>
+    <ul class="vym-list-ul-2">
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:0'>Corps finis</span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:0,bo:0'>Cardinal de Gl_n(F_q)<img src="flags/flag-rose.png"></span>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:0,bo:1'>p-sylows de Gl_n(F_p)</span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:0,bo:1,bo:0'>Thm de Sylow<img src="flags/flag-present.png"></span>  </li>
+        </ul>  </li>
+      </ul>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:1,bo:1'>Topologie<img src="flags/flag-flash.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+K = $R$ ou $C$<br/><br/>-&gt; ou alors risquer gros en parlant de la topologie de Zariski.
+</td></tr></table>
+
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:1,bo:0'>Ouvert</span>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:1,bo:1'>Dense</span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:1,bo:0'>Polynôme carac de AB = PCar BA<img src="flags/flag-present.png"></span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:1,bo:1'>Factorisation QR sur M_n<img src="flags/flag-present.png"></span>  </li>
+        </ul>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:1,bo:2'>Sous-groupes fermés</span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:2,bo:0'>Sl_n<img src="flags/flag-rose.png"></span>
+          <ul class="vym-list-ul-5">
+            <li><span class='vym-branch-5' style='color:#000000' id='mc:0,bo:1,bo:1,bo:2,bo:0,bo:0'>Sl_n(Z)</span>  </li>
+          </ul>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:2,bo:1'>O(n)<img src="flags/flag-rose.png"></span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:2,bo:2'>Sous-groupes compacts<img src="flags/flag-clock.png"><img src="flags/flag-arrow-up.png"></span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:2,bo:3'>Théorème de Cartan<img src="flags/flag-wip.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Tout sous-groupe fermé de Gl_n est un groupe de Lie. En particulier une variété différentiable C^\infty.
+</td></tr></table>
+  </li>
+        </ul>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:1,bo:3'>Connexité</span>
+        <ul class="vym-list-ul-4">
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:3,bo:0'>Gl_n(C) connexe<img src="flags/flag-rose.png"></span>  </li>
+          <li><span class='vym-branch-4' style='color:#000000' id='mc:0,bo:1,bo:1,bo:3,bo:1'>Gl_n(R)+</span>  </li>
+        </ul>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:1,bo:1,bo:4'>Surjectivité de l'exponentielle<img src="flags/flag-clock.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+[Objectif Agrégation]
+</td></tr></table>
+  </li>
+      </ul>  </li>
+    </ul>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:2'>Théorie des groupes</span></h2>
+    <ul class="vym-list-ul-2">
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:0'>Générateurs</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:1'>Centre</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:2'>Groupe dérivé</span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:2,bo:0'>Sl_n</span>  </li>
+      </ul>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:3'>Théorème de Burnside<img src="flags/flag-clock.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+[oraux X-ENS, algèbre 2]
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:2,bo:4'>Décomposition</span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:2,bo:4,bo:0'>PGl_n(C) = C* × SL_n</span>  </li>
+      </ul>  </li>
+    </ul>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:0,bo:3'>Sous-groupes<img src="flags/flag-flash.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Être au clair sur quels sous-groupes proviennent d'une identification Gl(E) = Gl_n(k)
+</td></tr></table>
+</h2>
+    <ul class="vym-list-ul-2">
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:0'>Sl_n<img src="flags/flag-rose.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+distingué !<br/>groupe dérivé ?
+</td></tr></table>
+  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:1'>Orthogonaux</span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:1,bo:0'>O(n)</span>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:1,bo:1'>O(p,q)</span>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:1,bo:2'>Sp(n)</span>  </li>
+      </ul>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:0,bo:3,bo:2'>S_n<img src="flags/flag-rose.png"></span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:2,bo:0'>Frobenius-Zolotaref<img src="flags/flag-clock.png"><img src="flags/flag-arrow-down.png"></span>  </li>
+        <li><span class='vym-branch-3' style='color:#000000' id='mc:0,bo:3,bo:2,bo:1'>Tout groupe fini<img src="flags/flag-present.png"></span>
+<table class="vym-note"><tr><td class="vym-note-flag">
+<td>
+Par Cayley !<br/><br/>Mais c'est aussi la "représentation standard"
+</td></tr></table>
+  </li>
+      </ul>  </li>
+    </ul>
+  
+<h1><span class='vym-branch-0' style='color:#000000' id='mc:1'>*</span></h1>
+  
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:0'>Légende</span></h2>
+    <ul class="vym-list-ul-2">
+      <li><span class='vym-branch-2' style='color:#565656' id='mc:1,bo:0,bo:0'>Exemple<img src="flags/flag-rose.png"></span>  </li>
+      <li><span class='vym-branch-2' style='color:#565656' id='mc:1,bo:0,bo:1'>Application<img src="flags/flag-present.png"></span>  </li>
+      <li><span class='vym-branch-2' style='color:#565656' id='mc:1,bo:0,bo:2'>Developpement<img src="flags/flag-clock.png"></span>
+      <ul class="vym-list-ul-3">
+        <li><span class='vym-branch-3' style='color:#565656' id='mc:1,bo:0,bo:2,bo:0'>Parfait<img src="flags/flag-2arrow-up.png"></span>  </li>
+        <li><span class='vym-branch-3' style='color:#565656' id='mc:1,bo:0,bo:2,bo:1'>A sa place<img src="flags/flag-arrow-up.png"></span>  </li>
+        <li><span class='vym-branch-3' style='color:#565656' id='mc:1,bo:0,bo:2,bo:2'>à déterminer</span>  </li>
+        <li><span class='vym-branch-3' style='color:#565656' id='mc:1,bo:0,bo:2,bo:3'>limite<img src="flags/flag-arrow-down.png"></span>  </li>
+        <li><span class='vym-branch-3' style='color:#565656' id='mc:1,bo:0,bo:2,bo:4'>non<img src="flags/flag-2arrow-down.png"></span>  </li>
+      </ul>  </li>
+      <li><span class='vym-branch-2' style='color:#565656' id='mc:1,bo:0,bo:3'>Remarque<img src="flags/flag-lamp.png"></span>  </li>
+      <li><span class='vym-branch-2' style='color:#565656' id='mc:1,bo:0,bo:4'>Attention piège<img src="flags/flag-flash.png"></span>  </li>
+      <li><span class='vym-branch-2' style='color:#565656' id='mc:1,bo:0,bo:5'>Pour la culture
+/Hors programme<img src="flags/flag-wip.png"></span>  </li>
+    </ul>
+  <h2><span class='vym-branch-1' style='color:#000000' id='mc:1,bo:1'>Références</span></h2>
+    <ul class="vym-list-ul-2">
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:1,bo:1,bo:0'>Perrin</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:1,bo:1,bo:1'>Objectif Agreg</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:1,bo:1,bo:2'>H2G2</span>  </li>
+      <li><span class='vym-branch-2' style='color:#000000' id='mc:1,bo:1,bo:3'>Spzirglaz</span>  </li>
+    </ul>
+  
+
+<map name='imagemap'>
+  <area shape='rect' coords='140.219,634.151,184.266,667.151' href='#mc:0'>
+  <area shape='rect' coords='357.756,313.583,457.116,343.583' href='#mc:0,bo:0'>
+  <area shape='rect' coords='478.116,315.083,541.35,342.083' href='#mc:0,bo:0,bo:0'>
+  <area shape='rect' coords='562.35,277.583,613.6,301.583' href='#mc:0,bo:0,bo:0,bo:0'>
+  <area shape='rect' coords='656.6,277.583,806.381,301.583' href='#mc:0,bo:0,bo:0,bo:0,bo:0'>
+  <area shape='rect' coords='562.35,316.583,714.053,340.583' href='#mc:0,bo:0,bo:0,bo:1'>
+  <area shape='rect' coords='735.053,303.583,805.038,327.583' href='#mc:0,bo:0,bo:0,bo:1,bo:0'>
+  <area shape='rect' coords='735.053,329.583,827.053,353.583' href='#mc:0,bo:0,bo:0,bo:1,bo:1'>
+  <area shape='rect' coords='584.35,355.583,720.444,379.583' href='#mc:0,bo:0,bo:0,bo:2'>
+  <area shape='rect' coords='341.879,438.728,488.489,468.728' href='#mc:0,bo:1'>
+  <area shape='rect' coords='509.489,425.728,594.864,452.728' href='#mc:0,bo:1,bo:0'>
+  <area shape='rect' coords='615.864,414.228,753.004,438.228' href='#mc:0,bo:1,bo:0,bo:0'>
+  <area shape='rect' coords='615.864,440.228,755.379,464.228' href='#mc:0,bo:1,bo:0,bo:1'>
+  <area shape='rect' coords='776.379,440.228,869.926,464.228' href='#mc:0,bo:1,bo:0,bo:1,bo:0'>
+  <area shape='rect' coords='553.489,466.228,634.832,493.228' href='#mc:0,bo:1,bo:1'>
+  <area shape='rect' coords='326.556,730.996,508.369,760.996' href='#mc:0,bo:2'>
+  <area shape='rect' coords='529.369,674.496,628.509,701.496' href='#mc:0,bo:2,bo:0'>
+  <area shape='rect' coords='529.369,703.496,587.916,730.496' href='#mc:0,bo:2,bo:1'>
+  <area shape='rect' coords='529.369,732.496,641.494,759.496' href='#mc:0,bo:2,bo:2'>
+  <area shape='rect' coords='662.494,733.996,695.384,757.996' href='#mc:0,bo:2,bo:2,bo:0'>
+  <area shape='rect' coords='551.369,761.496,724.775,788.496' href='#mc:0,bo:2,bo:3'>
+  <area shape='rect' coords='529.369,790.496,647.462,817.496' href='#mc:0,bo:2,bo:4'>
+  <area shape='rect' coords='668.462,791.996,798.353,815.996' href='#mc:0,bo:2,bo:4,bo:0'>
+  <area shape='rect' coords='365.579,571.91,489.548,601.91' href='#mc:0,bo:3'>
+  <area shape='rect' coords='554.548,508.41,592.439,535.41' href='#mc:0,bo:3,bo:0'>
+  <area shape='rect' coords='532.548,561.91,638.673,588.91' href='#mc:0,bo:3,bo:1'>
+  <area shape='rect' coords='659.673,537.41,695.298,561.41' href='#mc:0,bo:3,bo:1,bo:0'>
+  <area shape='rect' coords='659.673,563.41,706.611,587.41' href='#mc:0,bo:3,bo:1,bo:1'>
+  <area shape='rect' coords='659.673,589.41,699.861,613.41' href='#mc:0,bo:3,bo:1,bo:2'>
+  <area shape='rect' coords='532.548,626.91,566.079,653.91' href='#mc:0,bo:3,bo:2'>
+  <area shape='rect' coords='609.079,615.41,740.064,639.41' href='#mc:0,bo:3,bo:2,bo:0'>
+  <area shape='rect' coords='631.079,641.41,736.782,665.41' href='#mc:0,bo:3,bo:2,bo:1'>
+  <area shape='rect' coords='168.815,383.288,188.049,416.288' href='#mc:1'>
+  <area shape='rect' coords='33,245.288,115.469,275.288' href='#mc:1,bo:0'>
+  <area shape='rect' coords='274.807,53,379.385,83' href='#mc:1,bo:1'>
+  <area shape='rect' coords='400.385,11,452.603,38' href='#mc:1,bo:1,bo:0'>
+  <area shape='rect' coords='400.385,40,515.166,67' href='#mc:1,bo:1,bo:1'>
+  <area shape='rect' coords='400.385,69,448.432,96' href='#mc:1,bo:1,bo:2'>
+  <area shape='rect' coords='400.385,98,473.525,125' href='#mc:1,bo:1,bo:3'>
+</map>
+<hr/>
+<table class="vym-footer">   
+      <tr> 
+        <td class="vym-footerL">/home/basile/Git/bpillet.github.io/Agreg/106/GLn.html</td> 
+        <td class="vym-footerC">2015-04-30</td> 
+        <td class="vym-footerR"> <a href='http://www.insilmaril.de/vym'>vym 2.3.20</a></td> 
+      </tr> 
+     </table>
+</body></html>
