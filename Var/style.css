@@ -1,0 +1,48 @@
+html{
+    height: 100%;
+    overflow-y: auto;
+}
+section{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;    
+    overflow: hidden;
+    overflow-y: auto;
+}
+article{
+    height: 100%;
+    background-color: #a22b25;
+    overflow-y: auto;
+}
+article+article{
+    height: 100%;
+    background-color: #f49302;
+}
+h1, h2{
+    margin-top: 2em;
+    text-align: center;
+}
+nav{
+    width: 50%;
+    margin: auto;
+}
+nav ul{
+    display: block;
+    margin: auto;
+}
+nav ul *{
+    display: inline;
+}
+nav li+li::before{
+    content: " | ";
+}
+.scrolldown{
+    display: table-row;
+    vertical-align : bottom;
+    margin: auto;
+    height: 5em;
+    width: 75%;
+    background: #fff;
+}
