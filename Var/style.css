@@ -1,3 +1,6 @@
+
+@import "css/font-awesome.css";
+
 html{
     height: 100%;
     overflow-y: auto;
@@ -24,19 +27,62 @@ h1, h2{
     margin-top: 2em;
     text-align: center;
 }
+h1
+{
+    font-size: 300%;
+	text-align: center;
+	font-family: 'Computer Modern Serif', serif, sans-serif;
+    margin-bottom: 5em;
+    color: darkgrey;
+}
+h2
+{
+    font-size: 100%;
+	text-align: center;
+	font-family: 'Computer Modern Serif', serif, sans-serif;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+h1:first-letter{
+	text-transform: uppercase;
+}
+
+
+
+/*  
+                  ###  NAV  ###
+*/
+
 nav{
-    width: 50%;
     margin: auto;
 }
 nav ul{
+    text-align: center;
     display: block;
-    margin: auto;
+    margin:0;
+    padding:0;
 }
 nav ul *{
-    display: inline;
+    display: inline-block;
 }
-nav li+li::before{
-    content: " | ";
+nav li:after{
+    content: " \f063 ";
+}
+nav li:hover:after{
+    color: white;
+}
+nav li{
+    border: 1px dotted grey;
+    padding: 2em;
+    margin: 1em;
+}
+nav li:hover{
+    border: 1px solid grey;
+}
+nav li a{
+    color: darkgrey;
+    font-size: 150%;
+    text-decoration: none;
 }
 .scrolldown{
     display: table-row;
@@ -45,4 +91,20 @@ nav li+li::before{
     height: 5em;
     width: 75%;
     background: #fff;
+}
+
+
+/*** ? ? ? ***/
+.animate {
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes moveDown{
+    0% { 
+        transform: translateY(-40px); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);  
+        opacity: 1;
+    }
 }
