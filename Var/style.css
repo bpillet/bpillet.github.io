@@ -1,5 +1,10 @@
-
-@import "css/font-awesome.css";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 html{
     height: 100%;
@@ -27,17 +32,15 @@ h1, h2{
     margin-top: 2em;
     text-align: center;
 }
-h1
-{
+h1{
     font-size: 300%;
 	text-align: center;
 	font-family: 'Computer Modern Serif', serif, sans-serif;
-    margin-bottom: 5em;
+    margin-bottom: 1em;
     color: darkgrey;
 }
-h2
-{
-    font-size: 100%;
+h2{
+    font-size: 125%;
 	text-align: center;
 	font-family: 'Computer Modern Serif', serif, sans-serif;
     border-top: 1px solid black;
@@ -46,7 +49,19 @@ h2
 h1:first-letter{
 	text-transform: uppercase;
 }
-
+article ~ article{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 120%;
+	text-align: center;
+}
+h4{
+    padding-left: 2em;
+}
+p{
+    padding-left:.5em;
+}
 
 
 /*  
@@ -55,6 +70,7 @@ h1:first-letter{
 
 nav{
     margin: auto;
+    margin-top: 20vh;
 }
 nav ul{
     text-align: center;
@@ -65,37 +81,68 @@ nav ul{
 nav ul *{
     display: inline-block;
 }
-nav li:after{
+nav li a:after{
+    font: normal normal normal 1em FontAwesome;
     content: " \f063 ";
+    color: black;
 }
-nav li:hover:after{
+nav li a:hover:after{
     color: white;
 }
 nav li{
-    border: 1px dotted grey;
-    padding: 2em;
     margin: 1em;
 }
-nav li:hover{
+nav li a:hover{
     border: 1px solid grey;
 }
 nav li a{
+    border: 1px dotted grey;
+    padding: 2em;
     color: darkgrey;
     font-size: 150%;
     text-decoration: none;
 }
-.scrolldown{
-    display: table-row;
-    vertical-align : bottom;
-    margin: auto;
-    height: 5em;
-    width: 75%;
-    background: #fff;
+
+/*** Selecteurs ***/
+a{
+    text-decoration: none;
+}
+a[href$=".pdf"]:before{
+    font: normal normal normal 1em FontAwesome;
+    color: darkred;
+    content: "\f1c1\ ";
+    text-decoration: none;
+}
+a[href*="wikipedia"]:before{
+    font: normal normal normal 1em FontAwesome;
+    color: black;
+    content: "\f266\ ";
+    text-decoration: none;
+}
+h2:first-of-type::before{
+    content: url("http://ressources-infoglue.univ-rennes1.fr/_styles/www.univ-rennes1.fr/interface/logo.png") ;
+    content: "\ ";
+}
+/*article:nth-child(n>1){
+    visibility:hidden;
+    transform:translateY(-n*100vh);
+}
+article:target{
+    animation: slide 0.5s ease-in-out;
+}
+@keyframes slide{
+    0% { 
+        transform: translateY(100vh); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0vh);  
+        opacity: 1;
+    }
 }
 
-
-/*** ? ? ? ***/
-.animate {
+???
+nav a {
     animation: moveDown 0.6s ease-in-out 0.2s backwards;
 }
 @keyframes moveDown{
@@ -107,4 +154,4 @@ nav li a{
         transform: translateY(0px);  
         opacity: 1;
     }
-}
+}*/
