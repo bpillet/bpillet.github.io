@@ -1,3 +1,7 @@
+@import url("fonts/ComputerModern.css");
+
+@import url("fonts/ComputerModernSerif.css");
+
 @font-face {
   font-family: 'FontAwesome';
   src: url('fonts/fontawesome-webfont.eot?v=4.3.0');
@@ -5,6 +9,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 
 html{
     height: 100%;
@@ -14,6 +19,7 @@ section{
     height: 100%;
 }
 body{
+    font-family: ComputerModern, Helvetica, Arial, serif;
     height: 100%;
     margin: 0;    
     overflow: hidden;
@@ -57,7 +63,7 @@ h3{
 	text-align: center;
 }
 h4{
-    padding-left: 2em;
+    padding-left: 5vh;
 }
 p{
     padding-left:.5em;
@@ -97,9 +103,9 @@ nav li a:hover{
 }
 nav li a{
     border: 1px dotted grey;
-    padding: 2em;
+    padding: 4vh;
     color: darkgrey;
-    font-size: 150%;
+    font-size: 1.5em;
     text-decoration: none;
 }
 
