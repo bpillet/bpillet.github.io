@@ -30,9 +30,13 @@ article{
     background-color: #a22b25;
     overflow-y: auto;
 }
-article+article{
+article:nth-of-type(2){
     height: 100%;
     background-color: #f49302;
+}
+article:nth-of-type(3){
+    height: 100%;
+    background-color: grey;
 }
 h1, h2{
     margin-top: 2em;
