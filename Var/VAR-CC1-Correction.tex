@@ -10,11 +10,11 @@
 \item Faux !
 Par exemple $\Oo = \emptyset$ est un ouvert et alors $\Oo \cup A = A$. Donc, dans ce cas, $\Oo \cup A$ n'est un ouvert de $X$ que si $A$ est ouvert de $X$.
 
-Autre exemple dans $\R$ prendre $\Oo = ]0,1[$ et $A = \{1\}$. Alors $\Oo \cup A = ]0,1]$ qui n'est pas ouvert.
+Autre exemple, dans $\R$ prendre $\Oo = ]0,1[$ et $A = \{1\}$. Alors $\Oo \cup A = ]0,1]$ qui n'est pas ouvert.
 \item Faux !
 Par exemple $\Ff = X$ est un fermé de $X$ et alors $\Ff \cap B = B$. Donc, dans ce cas, $\Ff \cap B$ n'est un fermé de $X$ que si $B$ est fermé.
 
-Autre exemple dans $\R$ prendre $\Ff = [-2,2]$ et $B = ]-1,1[$. Alors $\Ff \cap B = ]-1,1[$ qui n'est pas fermé.
+Autre exemple, dans $\R$ prendre $\Ff = [-2,2]$ et $B = ]-1,5]$. Alors $\Ff \cap B = ]-1,2]$ qui n'est pas fermé.
 \end{enumerate}
 
 \exercice{}
@@ -40,7 +40,7 @@ Première remarque
 \[
 \cos^4(\theta)+\sin^4(\theta) = (\cos^2(\theta) + \sin^2(\theta))^2 - 2\cos^2(\theta)\sin^2(\theta) = 1 - 2(\cos(\theta)\sin(\theta))^2
 \]
-Or $\cos(\theta)\sin(\theta) = \demi\sin(2\theta) \in [-\demi,\demi]$.
+Or $\cos(\theta)\sin(\theta) = \demi\sin(2\theta) \in [-\demi,\demi]$. Donc $2(\cos(\theta)\sin(\theta))^2 \in  [-\demi,\demi]$
 
 Bilan $\cos^4(\theta)+\sin^4(\theta) > \demi$ et donc la fraction
 \[
@@ -50,7 +50,59 @@ est bornée.
 
 On remarque ensuite que : \textbf{Si} $m+n-4 > 0$ \textbf{alors} la limite de $f$ quand $(x,y) \to (0,0)$ vaut $0$ car $r^{m+n-4} \to 0$ et la fraction est bornée.
 
-Reste à vérifier la réciproque~: si $f$...
+Reste à vérifier la réciproque~: si $m+n \leq 4$ alors $f$ est discontinue.
+
+Par exemple si $\theta = \pi/4$ alors  
+\[
+\dfrac{\cos^m(\theta)\sin^n(\theta)}{\cos^4(\theta)+\sin^4(\theta)} = 2 \times \left(\dfrac{\sqrt{2}}{2}\right)^{m+n} \neq 0
+\]
+Et donc 
+\[
+\underset{r\to 0, \theta = \pi/4}{\lim} f(x,y) \neq 0
+\]
+Donc $f$ ne peut pas être continue en $0$.
+
+\item Les dérivées partielles en $0$ sont définies comme limite du taux d'accroissement~:
+\[
+\dpp{f}{x}(0,0)= \lim_{h \to 0} \dfrac{1}{h} \left( f(h,0)  - f(0,0) \right) = \lim_{h \to 0} \dfrac{1}{h} \left(\dfrac{h^m0^n}{h^4} \right)
+\]
+Cette limite existe et vaut $0$ dès lors que $n>0$ ou ($n=0$ et $m>5$). Dans le cas $n=0$ et $m=5$, cette limite vaut $1$. Elle n'existe pas ou n'est pas finie dans tous les autres cas.
+De même pour la dérivée par rapport à $y$ (ou par un argument de symétrie (à rédiger en exercice))
+\[
+\dpp{f}{y}(0,0) = \left\lbrace
+\begin{array}{cc}
+0 & m>0 \\ 
+1 & m=0, n=5 \\ 
+0 & m=0, n> 5
+\end{array} 
+\right.
+\]
+et n'existe pas ou n'est pas finie dans les autres cas.
+
+En conclusion les dérivées partielles existent en $(0,0)$ si $m,n>0$ ou si $\max (m,n)\geq 5$. En particulier pour $m=n=1$, par ce qui précède $f$ n'est pas continue en $(0,0)$, pourtant des dérivée partielles d'ordre $1$ existent et on a~:
+\[
+\dpp{f}{x}(0,0) = \dpp{f}{y}(0,0) = 0
+\]
+
+\item La fonction $f$ admet des dérivées partielles à tout ordre en dehors de $(0,0)$. On les obtient par les formules usuelles de dérivation~:
+\[
+\dpp{f}{x}(x,y) = \dfrac{mx^{m-1}y^n(x^4+y^4) - 4x^{m+3}y^n}{(x^4+y^4)^2} = 
+\dfrac{(m-4)x^{m+3}y^n +mx^{m-1}y^{n+4}}{(x^4+y^4)^2}
+\]
+On vérifie prudemment que cette formule donne bien le résultat même dans le cas $m=0$ et $m=1$. Et de même par rapport à $y$~:
+\[
+\dpp{f}{y}(x,y) = \dfrac{(n-4)y^{n+3}x^n +ny^{n-1}x^{m+4}}{(x^4+y^4)^2}
+\]
+En passant en polaire comme précédemment, on obtient
+\[
+\dpp{f}{x}(x,y) = r^{m+n+3-2\times 4} \dfrac{(m-4)\cos^{m+3}\sin^n +m\cos^{m-1}\sin^{n+4}}{(\cos^4+\sin^4)^2}
+\]
+On se restreindra à partir de maintenant au cas $m,n>0$ comme demandé dans l'énoncé. Dès lors cette fonction tend vers $0$ \ssi $m+n-5 >0$. Un raisonnement symétrique pour $y$ permet de conclure que les dérivées partielles de $f$ sont continues en $(0,0)$ \ssi $m+n >5$. Comme $f$ est clairement de classe $\Cc^1$ hors de $(0,0)$. On peut dire que $f$ est de classe $\Cc^1$ \ssi $m+n >5$.
+\item Si la différentielle de $f$ existe en $(0,0)$, elle est donnée par les dérivées partielles en $(0,0)$ dès lors
+\[
+Df(0,0)(h,k) = h \dpp{f}{x}(0,0) + k \dpp{f}{y}(0,0) = 0
+\]
+\item Si est différentiable en $(0,0)$, alors elle est continue et donc par le point (1), on a $m+n \geq 5$. Cependant elle n'est de classe $\Cc^1$ que si $m+n > 5$ donc son caractère différentiable n'implique pas son caractère $\Cc^1$.
 \end{enumerate}
 
 \exercice{}
@@ -74,6 +126,114 @@ D\phi(a)(h) = L(h) = \phi(h)
 \]
 
 \exercice{}
+On vérifie les axiomes de norme~:
+\begin{enumerate}[(a)]
+\item $N : \R[X] \rightarrow \R^+$
+\item \textit{homogénéité positive}~: $\forall \lambda \in \R, \forall p \in \R[X], N(\lambda p) = |\lambda| N(p)$
+\item \textit{définie}~: $\forall p \in \R[X], N(p) = 0 \ssi p=0$
+\item \textit{Inégalité triangulaire (pour les normes)}~: $\forall p,q \in \R[X], N(x+y) \leq N(p) + N(q)$
+\end{enumerate}
 
+\begin{enumerate}[{\bf (a)}]
+\item Il est clair que $N$ est définie sur $\R[X]$ tout entier et à valeur positives.
+\item Soit $\lambda \in \R$ et soit $p \in \R[X]$, alors en posant
+\[
+p(X) = a_0 + a_1X + \cdots + a_n X^n
+\]
+on a
+\[
+(\lambda p)(X) = (\lambda a_0) + (\lambda a_1)X + \cdots + (\lambda a_n) X^n
+\]
+et donc \[
+N(\lambda p) = \sup_{i\in \N}( \vert \lambda a_i \vert) = \sup_{i\in \N}( \vert \lambda \vert \vert a_i \vert) = \vert \lambda \vert \sup_{i\in \N}(  \vert a_i \vert) = \vert \lambda \vert N(p)
+\]
+Ceci étant vrai quelque soit $\lambda \in \R$ et $p \in \R[X]$ on a bien montré que $N$ vérifie l'axiome d'homogénéité (b).
+\item Il est clair que si $p =0$ est le polynôme nul alors $N(p) = 0$. Réciproquement, soit $p \in \R[X]$ tel que $N(p) = 0$. Posons 
+\[
+p(X) = a_0 + a_1X + \cdots + a_n X^n
+\]
+Alors on en déduit que $\sup_{i\in \N}( \vert a_i \vert) = 0$ donc pour tout $i \in \N$, $\vert a_i \vert  = 0$ donc $p = 0$.
+On a bien montré que pour $p \in \R[X]$, $N(p) = 0 \ssi p = 0$.
+\item Soient $p,q \in \R[X]$, on pose
+\begin{align*}
+p(X) &= a_0 + a_1X + \cdots + a_n X^n\\
+q(X) &= b_0 + b_1X + \cdots + b_n X^n
+\end{align*}
+quitte à poser $b_n, b_{n-1}, \cdots, b_k = 0$ si le degré de $q$ est inférieur à $k$.
+Alors $p+q$ est donné par
+\[
+(p+q)(X) = (a_0+b_0) + (a_1+b_1)X + \cdots + (a_n+b_n) X^n
+\]
+dès lors, en utilisant l'inégalité triangulaire pour la valeur absolue et la propriété "la borne supérieure d'une sommes est plus grande que la somme des bornes supérieures" on trouve
+\[
+N(p+q) = \sup_{i \in \N} \vert a_i + b_i \vert \leq \sup_{i \in \N} (\vert a_i \vert  + \vert b_i \vert ) \leq \sup_{i \in \N}\vert a_i \vert  + \sup_{j \in \N}\vert b_j \vert = N(p) + N(q)
+\]
+Ceci étant vrai quelque soient $p$ et $q$ dans $\R[X]$. On a donc bien montré l'inégalité triangulaire.
+\end{enumerate}
+
+Bilan $N$ est bien une norme sur $\R[X]$.
+
+\paragraph{}
+La fonction $\psi$ est définie et continue sur $\R[X]$ comme fonction polynomiale (n'a rien avoir avec le fait que les éléments de $\R[X]$ sont des polynômes ; c'est simplement la fonction $u \mapsto u^2 + 5u$ qui est polynomiale, et donc les propriétés usuelles de continuité s'appliquent).
+
+Soit $p,h \in \R[X]$, considérons
+\[
+\psi(p + h) = (p+h)^2 + 5(p+h) = p^2 + 5p + 2ph + 5h + h^2 = \psi(p) + L(h) + h^2
+\]
+où $L(h) = (2p+5)h$. Il est clair que $L$ est linéaire et continue par rapport à $h$. Reste à montrer que $h^2 = N(h)\epsilon(h)$ avec $\epsilon$ qui a pour limite $0 \in \R[X]$ quand $h \to 0$ ; on pourra alors conclure que $D\psi(p)h = L(h)$.
+
+Il suffit de montre que $N(h^2)/N(h) \to 0$ quand $h \to 0$ et $h \neq 0$. En effet $N(h^2) = N(N(h)\epsilon(h)) = N(h)N(\epsilon(h))$ et par définition $N(\epsilon(h)) \to 0$ quand $h \to 0$.
+
+Or si \[
+h(X) = a_0 + a_1 X + \cdots + a_n X^n
+\]
+alors
+\[
+h^2(X) = a_0^2 + 2a_0a_1 X + (2a_0a_2 + a_1^2)X^2 + \cdots + b_k X^k + \cdots + a_n^2 X^{2n}
+\]
+où on peut montrer par récurrence que 
+\[
+b_k = \sum_{i+j = k} a_i a_j
+\]
+Dès lors
+\[
+N(h^2) =\sup_{k \in \N} \vert b_k \vert = \sup_{k \leq 2n} \vert b_k \vert = \sup_{k \leq 2n}  \left\vert \sum_{i+j = k} a_i a_j\right\vert  \leq \sup_{k \leq 2n}  \sum_{i+j = k} \vert a_i \vert\vert a_j \vert
+\]
+or pour $i_0$ fixé, $\vert a_{i_0} \vert \leq \sup_i \vert a_i\vert = N(h)$ donc on peut écrire
+\[
+N(h^2) \leq \sup_{k \leq 2n}  \sum_{i+j = k} N(h)N(h) \leq \sup_{k \leq 2n}  kN(h)N(h) \leq 2n N(h)^2
+\]
+Ce qui suffit pour conclure.
 \exercice{}
+On supposera $z$ de classe $\Cc^1$.
+
+On a une égalité de deux fonctions de $x,y$~:
+\[
+x^2+y^2+z(x,y)^2 = \phi(x + y + z(x,y))
+\]
+Comme ces deux fonctions sont de classe $\Cc^1$ sur $\R$ comme composés et sommes de fonctions de classe $\Cc^1$ sur $\R$ on peut dériver l'égalité par rapport à $x$ et $y$ pour obtenir
+\begin{align*}
+2x + 2z\dpp{z}{x}(x,y) &= \phi'(x+y+z)\left(1+ \dpp{z}{x}(x,y)\right)\\
+2y + 2z\dpp{z}{y}(x,y) &= \phi'(x+y+z)\left(1+ \dpp{z}{y}(x,y)\right)\\
+\end{align*}
+où $z$ signifie réellement $z(x,y)$.
+
+En faisant la différence des deux equations on obtient
+\[	
+2(x-y) + \left(2z - \phi'(x+y+z)\right)\left(\dpp{z}{x}(x,y)-\dpp{z}{y}(x,y)\right) = 0
+\]
+D'autre part, en multipliant la première par $\dpp{z}{y}(x,y)$ et la seconde par $\dpp{z}{x}(x,y)$ et en faisant la différence, on obtient~:
+\[
+2x \dpp{z}{y}(x,y) - 2y\dpp{z}{x}(x,y) = \phi'(x+y+z)\left(\dpp{z}{x}(x,y)-\dpp{z}{y}(x,y)\right)
+\]
+
+En regroupant, il s'en suit que
+\[
+2(x-y) + 2z\left(\dpp{z}{x}(x,y)-\dpp{z}{y}(x,y)\right) = \phi'(x+y+z)\left(\dpp{z}{x}(x,y)-\dpp{z}{y}(x,y)\right)
+=2x \dpp{z}{y}(x,y) - 2y\dpp{z}{x}(x,y)
+\]
+Et donc
+\[
+x- y = (x-z)\dpp{z}{y}(x,y) + (z-y)\dpp{z}{x}(x,y)
+\]
 \end{document}
