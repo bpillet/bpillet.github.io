@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage{teaching}
+	
+\begin{document}
+\dochead{Licence 2 --- Mathématiques}{Fonctions de plusieurs variables}{Correction CC 1}
+
+\exercice{}
+
+\begin{enumerate}
+\item Faux !
+Par exemple $\Oo = \emptyset$ est un ouvert et alors $\Oo \cup A = A$. Donc, dans ce cas, $\Oo \cup A$ n'est un ouvert de $X$ que si $A$ est ouvert de $X$.
+
+Autre exemple dans $\R$ prendre $\Oo = ]0,1[$ et $A = \{1\}$. Alors $\Oo \cup A = ]0,1]$ qui n'est pas ouvert.
+\item Faux !
+Par exemple $\Ff = X$ est un fermé de $X$ et alors $\Ff \cap B = B$. Donc, dans ce cas, $\Ff \cap B$ n'est un fermé de $X$ que si $B$ est fermé.
+
+Autre exemple dans $\R$ prendre $\Ff = [-2,2]$ et $B = ]-1,1[$. Alors $\Ff \cap B = ]-1,1[$ qui n'est pas fermé.
+\end{enumerate}
+
+\exercice{}
+
+\begin{enumerate}
+\item $f$ est définie sur $\R^2$. De plus sur $\R^2 \setminus \{(0,0)\}$ c'est une fraction rationnelle dont le dénominateur ne s'annule pas. C'est donc une fonction continue sur $\R^2 \setminus \{(0,0)\}$.
+
+Reste à regarder si elle est continue sur en $(0,0)$.
+
+En coordonnées polaires :
+\begin{align*}
+x &= r\cos(\theta)\\
+y &= r\sin(\theta)
+\end{align*}	
+ avec $r>0$ et $\theta \in [0,2\pi[$.
+ 
+On a alors
+\[
+f(x,y) = \dfrac{(r\cos(\theta))^m(r\sin(\theta))^n}{r^4(\cos^4(\theta)+\sin^4(\theta))}
+= r^{m+n-4} \dfrac{\cos^m(\theta)\sin^n(\theta)}{\cos^4(\theta)+\sin^4(\theta)}
+\]
+Première remarque 
+\[
+\cos^4(\theta)+\sin^4(\theta) = (\cos^2(\theta) + \sin^2(\theta))^2 - 2\cos^2(\theta)\sin^2(\theta) = 1 - 2(\cos(\theta)\sin(\theta))^2
+\]
+Or $\cos(\theta)\sin(\theta) = \demi\sin(2\theta) \in [-\demi,\demi]$.
+
+Bilan $\cos^4(\theta)+\sin^4(\theta) > \demi$ et donc la fraction
+\[
+\dfrac{\cos^m(\theta)\sin^n(\theta)}{\cos^4(\theta)+\sin^4(\theta)}
+\] 
+est bornée.
+
+On remarque ensuite que : \textbf{Si} $m+n-4 > 0$ \textbf{alors} la limite de $f$ quand $(x,y) \to (0,0)$ vaut $0$ car $r^{m+n-4} \to 0$ et la fraction est bornée.
+
+Reste à vérifier la réciproque~: si $f$...
+\end{enumerate}
+
+\exercice{}
+On suppose $\E$ de dimension finie.
+
+$\phi$ est continue car linéaire et on a
+\[
+\phi(a+h) = \phi(a) + \phi(h)
+\]
+par linéarité de $\phi$, il s'en suit donc que en posant $L = \phi : \E \rightarrow \E$ et $\epsilon$ la fonction nulle de $\E \rightarrow \E$.
+
+L'égalité du dessus se réécrit donc
+\[
+\phi(a+h) = \phi(a) + L(h) + \Vert h \Vert_\E \epsilon(h)
+\]
+avec $\lim_{h \to 0} \epsilon(h) = 0$ et $L$ linéaire continue donc $L$ est la différentielle de $\phi$ en $a$.
+
+Ainsi
+\[
+D\phi(a)(h) = L(h) = \phi(h)
+\]
+
+\exercice{}
+
+\exercice{}
+\end{document}
