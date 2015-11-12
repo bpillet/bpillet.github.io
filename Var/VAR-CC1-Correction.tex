@@ -1,5 +1,5 @@
 \documentclass{article}
-\usepackage{teaching}
+\usepackage[color]{teaching}
 	
 \begin{document}
 \dochead{Licence 2 --- Mathématiques}{Fonctions de plusieurs variables}{Correction CC 1}
@@ -24,7 +24,8 @@ Autre exemple, dans $\R$ prendre $\Ff = [-2,2]$ et $B = ]-1,5]$. Alors $\Ff \cap
 
 Reste à regarder si elle est continue sur en $(0,0)$.
 
-En coordonnées polaires :
+\textbf{1er méthode :} 
+En coordonnées polaires
 \begin{align*}
 x &= r\cos(\theta)\\
 y &= r\sin(\theta)
@@ -61,6 +62,20 @@ Et donc
 \underset{r\to 0, \theta = \pi/4}{\lim} f(x,y) \neq 0
 \]
 Donc $f$ ne peut pas être continue en $0$.
+
+
+\textbf{2ème méthode :} On rappelle que $\Vert (x,y) \Vert^2 = x^2 + y^2$ et que par définition $\Vert (x,y) \Vert \to 0$ \ssi $(x,y) \to 0$.
+ 
+ \begin{align*}
+ |x| &\leq  \Vert (x,y) \Vert\\
+ |y| &\leq  \Vert (x,y) \Vert\\
+ x^4+ y^4 &\geq (x^2+y^2)^2 \geq  \Vert (x,y) \Vert^4
+ \end{align*}
+ Bilan
+ \[
+\vert f(x,y) \vert  \leq \dfrac{\Vert (x,y) \Vert^m\Vert (x,y) \Vert^n}{\Vert (x,y) \Vert^4} = \Vert (x,y) \Vert^{m+n-4}
+ \]
+Ce qui permet de conclure que $f$ est continue en $0$ dès lors que $m+n-4 >0$.
 
 \item Les dérivées partielles en $0$ sont définies comme limite du taux d'accroissement~:
 \[
@@ -180,30 +195,10 @@ Soit $p,h \in \R[X]$, considérons
 \[
 \psi(p + h) = (p+h)^2 + 5(p+h) = p^2 + 5p + 2ph + 5h + h^2 = \psi(p) + L(h) + h^2
 \]
-où $L(h) = (2p+5)h$. Il est clair que $L$ est linéaire et continue par rapport à $h$. Reste à montrer que $h^2 = N(h)\epsilon(h)$ avec $\epsilon$ qui a pour limite $0 \in \R[X]$ quand $h \to 0$ ; on pourra alors conclure que $D\psi(p)h = L(h)$.
+où $L(h) = (2p+5)h$. Il est clair que $L$ est linéaire et continue par rapport à $h$. Reste à montrer que $h^2 = N(h)\epsilon(h)$ avec $\epsilon$ qui a pour limite $0 \in \R[X]$ quand $h \to 0$.
 
-Il suffit de montre que $N(h^2)/N(h) \to 0$ quand $h \to 0$ et $h \neq 0$. En effet $N(h^2) = N(N(h)\epsilon(h)) = N(h)N(\epsilon(h))$ et par définition $N(\epsilon(h)) \to 0$ quand $h \to 0$.
+Pour cela, on peut admettre\footnote{Cf annexe pour une preuve} que $N(h^2)/N(h) \to 0$ quand $h \to 0$ et $h \neq 0$. Dès lors on a bien  $D\psi(p)h = L(h)$.
 
-Or si \[
-h(X) = a_0 + a_1 X + \cdots + a_n X^n
-\]
-alors
-\[
-h^2(X) = a_0^2 + 2a_0a_1 X + (2a_0a_2 + a_1^2)X^2 + \cdots + b_k X^k + \cdots + a_n^2 X^{2n}
-\]
-où on peut montrer par récurrence que 
-\[
-b_k = \sum_{i+j = k} a_i a_j
-\]
-Dès lors
-\[
-N(h^2) =\sup_{k \in \N} \vert b_k \vert = \sup_{k \leq 2n} \vert b_k \vert = \sup_{k \leq 2n}  \left\vert \sum_{i+j = k} a_i a_j\right\vert  \leq \sup_{k \leq 2n}  \sum_{i+j = k} \vert a_i \vert\vert a_j \vert
-\]
-or pour $i_0$ fixé, $\vert a_{i_0} \vert \leq \sup_i \vert a_i\vert = N(h)$ donc on peut écrire
-\[
-N(h^2) \leq \sup_{k \leq 2n}  \sum_{i+j = k} N(h)N(h) \leq \sup_{k \leq 2n}  kN(h)N(h) \leq 2n N(h)^2
-\]
-Ce qui suffit pour conclure.
 \exercice{}
 On supposera $z$ de classe $\Cc^1$.
 
@@ -236,4 +231,30 @@ Et donc
 \[
 x- y = (x-z)\dpp{z}{y}(x,y) + (z-y)\dpp{z}{x}(x,y)
 \]
+
+\appendix
+\pagebreak
+\subsection*{Annexe exercice 3}
+Il suffit de montrer que $N(h^2)/N(h) \to 0$ quand $h \to 0$ et $h \neq 0$. En effet $N(h^2) = N(N(h)\epsilon(h)) = N(h)N(\epsilon(h))$ par homogénéité. De plus, par définition, $N(\epsilon(h)) \to 0$ quand $h \to 0$.
+
+Or si \[
+h(X) = a_0 + a_1 X + \cdots + a_n X^n
+\]
+alors
+\[
+h^2(X) = a_0^2 + 2a_0a_1 X + (2a_0a_2 + a_1^2)X^2 + \cdots + b_k X^k + \cdots + a_n^2 X^{2n}
+\]
+où on peut montrer par récurrence que 
+\[
+b_k = \sum_{i+j = k} a_i a_j
+\]
+Dès lors
+\[
+N(h^2) =\sup_{k \in \N} \vert b_k \vert = \sup_{k \leq 2n} \vert b_k \vert = \sup_{k \leq 2n}  \left\vert \sum_{i+j = k} a_i a_j\right\vert  \leq \sup_{k \leq 2n}  \sum_{i+j = k} \vert a_i \vert\vert a_j \vert
+\]
+or pour $i_0$ fixé, $\vert a_{i_0} \vert \leq \sup_i \vert a_i\vert = N(h)$ donc on peut écrire
+\[
+N(h^2) \leq \sup_{k \leq 2n}  \sum_{i+j = k} N(h)N(h) \leq \sup_{k \leq 2n}  kN(h)N(h) \leq 2n N(h)^2
+\]
+Ce qui suffit pour conclure.
 \end{document}
