@@ -69,11 +69,14 @@ Donc $f$ ne peut pas être continue en $0$.
  \begin{align*}
  |x| &\leq  \Vert (x,y) \Vert\\
  |y| &\leq  \Vert (x,y) \Vert\\
- x^4+ y^4 &\geq (x^2+y^2)^2 \geq  \Vert (x,y) \Vert^4
+ a^2 + b^2 &\geq 2ab \\
+ 2(a^2+b^2) &\geq a^2 + b^2 + 2ab = (a+b)^2 \\
+ x^4+ y^4 &\geq \demi (x^2 + y^2)^2\\
+ 				&\geq \demi \Vert (x,y) \Vert^4
  \end{align*}
  Bilan
  \[
-\vert f(x,y) \vert  \leq \dfrac{\Vert (x,y) \Vert^m\Vert (x,y) \Vert^n}{\Vert (x,y) \Vert^4} = \Vert (x,y) \Vert^{m+n-4}
+\vert f(x,y) \vert  \leq 2\dfrac{\Vert (x,y) \Vert^m\Vert (x,y) \Vert^n}{\Vert (x,y) \Vert^4} = 2\Vert (x,y) \Vert^{m+n-4}
  \]
 Ce qui permet de conclure que $f$ est continue en $0$ dès lors que $m+n-4 >0$.
 
