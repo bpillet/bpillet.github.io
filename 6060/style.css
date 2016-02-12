@@ -1,6 +1,13 @@
 @import url("Baroque_Script/stylesheet.css");
 
 @font-face {
+	font-family: "Dragon";
+	src: url('Dragoniscoming.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'FontAwesome';
   src: url('fonts/fontawesome-webfont.eot?v=4.3.0');
   src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
@@ -11,7 +18,7 @@
 
 html{
     height: 100%;
-    overflow-y: auto;
+    overflow: hidden;
 }
 #wrap{
     -webkit-transform: rotate(3deg); /* Chrome, Safari, Opera */
@@ -28,27 +35,19 @@ section{
     box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.6);
     margin: auto;
     margin-top : 10%;
-<<<<<<< HEAD
     background-color: black;
     color: #D0D0E0;
     text-align: center;
     overflow: hidden;
 }
 article{
+	position: relative;
     padding: .5em;
     height: 100%;
     width: 100%;
     background: -moz-linear-gradient(-45deg, rgba(76,76,76,0.1) 0%, rgba(89,89,89,0.1) 12%, rgba(102,102,102,0.1) 25%, rgba(71,71,71,0.1) 39%, rgba(44,44,44,0.1) 50%, rgba(0,0,0,0.1) 51%, rgba(17,17,17,0.1) 60%, rgba(43,43,43,0.1) 76%, rgba(28,28,28,0.1) 91%, rgba(19,19,19,0.1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, rgba(76,76,76,0.1) 0%,rgba(89,89,89,0.1) 12%,rgba(102,102,102,0.1) 25%,rgba(71,71,71,0.1) 39%,rgba(44,44,44,0.1) 50%,rgba(0,0,0,0.1) 51%,rgba(17,17,17,0.1) 60%,rgba(43,43,43,0.1) 76%,rgba(28,28,28,0.1) 91%,rgba(19,19,19,0.1) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, rgba(76,76,76,0.1) 0%,rgba(89,89,89,0.1) 12%,rgba(102,102,102,0.1) 25%,rgba(71,71,71,0.1) 39%,rgba(44,44,44,0.1) 50%,rgba(0,0,0,0.1) 51%,rgba(17,17,17,0.1) 60%,rgba(43,43,43,0.1) 76%,rgba(28,28,28,0.1) 91%,rgba(19,19,19,0.1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-=======
-    background-color: #101010;
-    color: #D0D0E0;
-    text-align: center;
-/*    border: 1px solid #D0D0E0;
-    outline: 1px solid transparent;*/
-    padding: .5em;
->>>>>>> 683a8064f4bf0e79923253113dd8c6f1fb80c7e5
 }
 h2{
     margin: 1em 1em 1em 1em;
@@ -57,18 +56,33 @@ h2{
     border-bottom: 1px dotted #D0D0E0;
 }
 p{
-    margin: 2em;
-    font-size: 1.2em;
+	font-family: "Dragon";
+    margin: .5em;
+    font-size: 5em;
+}
+.chiffre{
+	padding: .2em;
+	font-family: "Baroque Script", Helvetica, Arial, serif;
+	font-size: 1.5rem;
 }
 p:first-letter{
     font-size: 2em;
+}
+#star{
+	font-family: "Baroque Script", Helvetica, Arial, serif;
+	font-size: 1.2rem;
+}
+footer{
+  	margin: 0 2em 2em 2em;
+    position: absolute;
+    bottom: 0;
 }
 body{
     font-family: "Baroque Script", Helvetica, Arial, serif;
     height: 100%;
     margin: 0;    
     overflow: hidden;
-    overflow-y: auto;
+    /*overflow-y: auto;*/
     background:
 radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0,
 radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px,
